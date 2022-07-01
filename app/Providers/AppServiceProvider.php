@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Strategy\SmsChannels\Drivers\kavengar;
+use App\Strategy\SmsChannels\Drivers\Smsir;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('App\Strategy\SmsChannels\SmsChannelsInterface', function() {
+            return new kavengar;
+            //return new Smsir;
+        });
     }
 
     /**
