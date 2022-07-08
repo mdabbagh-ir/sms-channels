@@ -10,4 +10,8 @@ class Smsir implements SmsChannelsInterface
     {
         return ['Smsir'];
     }
+    public function checkVerifyCode($phone , $key)
+    {
+        return ['Smsir'];
+    }
 }

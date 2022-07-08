@@ -10,4 +10,8 @@ class kavengar implements SmsChannelsInterface
     {
         return ['kavengar'];
     }
+    public function checkVerifyCode($phone , $key)
+    {
+        return ['kavengar'];
+    }
 }
